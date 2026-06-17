@@ -1,0 +1,57 @@
+# ==========================================
+# .NET Build and Release Artifacts
+# ==========================================
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+x64/
+x86/
+bld/
+
+# ==========================================
+# Visual Studio Code User Settings
+# ==========================================
+# Ignore the entire .vscode directory by default EXCEPT for tasks and launch configurations
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# ==========================================
+# Visual Studio & Rider Global Artifacts
+# ==========================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ==========================================
+# Secrets and Environment Configurations
+# ==========================================
+*.env
+*.env.*
+secrets.json
+
+# Note: Only ignore appsettings.Development.json if it contains local development secrets. 
+# Keep your main appsettings.json committed to version control.
+
+# ==========================================
+# Package Manager Directories
+# ==========================================
+# NuGet packages are restored dynamically at build time
+**/packages/*
+!**/packages/build/
+*.nupkg
+
+# Crash dumps and test results
+*.json.user
+[Tt]est[Rr]esult*/
+
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+Thumbs.db

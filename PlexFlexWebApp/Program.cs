@@ -1,3 +1,7 @@
+using Application.Services;
+using Domain.Interfaces.Repositories;
+using Domain.Interfaces.Services;
+using Infrastructure.Repositories;
 using PlexFlexWebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddScoped<ITestService, TestService>();
+builder.Services.AddScoped<ITestRepository, TestRepository>();
 
 var app = builder.Build();
 

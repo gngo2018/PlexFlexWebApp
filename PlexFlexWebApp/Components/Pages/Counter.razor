@@ -1,5 +1,6 @@
 ﻿@page "/counter"
 @rendermode InteractiveServer
+@inject ITestService _testSvc
 
 <PageTitle>Counter</PageTitle>
 
@@ -22,9 +23,7 @@ else if(currentCount % 2 == 0){
     private int currentCount = 0;
 
     private void IncrementCount()
-    {
-        TestService testSvc = new TestService();
-        
-        currentCount = testSvc.GetRandomNumber();
+    {   
+        currentCount = _testSvc.GetRandomNumber();
     }
 }

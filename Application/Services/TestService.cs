@@ -1,11 +1,19 @@
+using Domain.Interfaces.Repositories;
+using Domain.Interfaces.Services;
+
 namespace Application.Services
 {
-    public class TestService
+    public class TestService : ITestService
     {
+        private readonly ITestRepository _testRepository;
+        public TestService(ITestRepository testRepository)
+        {
+            _testRepository = testRepository;
+        }
+
         public int GetRandomNumber()
         {
-            var random = new Random();
-            return random.Next(100);
+            return _testRepository.QueryRandomNumber();
         }
     }    
 }

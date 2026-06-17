@@ -5,7 +5,7 @@
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p role="status">Random Number Generated: @currentCount</p>
 
 @if(currentCount == 0){
     <h3 style="color:blue"><em>Count is zero!</em></h3>
@@ -23,6 +23,8 @@ else if(currentCount % 2 == 0){
 
     private void IncrementCount()
     {
-        currentCount++;
+        TestService testSvc = new TestService();
+        
+        currentCount = testSvc.GetRandomNumber();
     }
 }

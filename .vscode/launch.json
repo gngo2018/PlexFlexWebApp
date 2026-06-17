@@ -7,7 +7,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // For a Blazor Web App, point to the primary project assembly
-            "program": "${workspaceFolder}/bin/Debug/net10.0/PlexFlexWebApp.dll",
+            "program": "${workspaceFolder}/PlexFlexWebApp/bin/Debug/net10.0/PlexFlexWebApp.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

@@ -1,4 +1,4 @@
-namespace Domain.Interfaces.Repositories;
+namespace Application.Interfaces;
 
 public interface ITestRepository
 {

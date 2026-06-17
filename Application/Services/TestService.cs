@@ -1,9 +1,8 @@
-using Domain.Interfaces.Repositories;
-using Domain.Interfaces.Services;
+using Application.Interfaces;
 
 namespace Application.Services
 {
-    public class TestService : ITestService
+    public class TestService
     {
         private readonly ITestRepository _testRepository;
         public TestService(ITestRepository testRepository)
